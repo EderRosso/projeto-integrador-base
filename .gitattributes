@@ -1,0 +1,10 @@
+# Mantém as quebras de linha no padrão LF em todos os sistemas
+# (evita erros "Delete ␍" do Prettier/ESLint no Windows)
+* text=auto eol=lf
+
+*.docx binary
+*.xlsx binary
+*.pptx binary
+*.png binary
+*.jpg binary
+*.ico binary

@@ -1,0 +1,49 @@
+# Testes automáticos: rodam em cada Pull Request e em cada push na develop/main.
+# Arquivo do professor: não altere.
+name: Testes automáticos
+
+on:
+  pull_request:
+  push:
+    branches: [main, develop]
+
+jobs:
+  backend:
+    name: Back-end (lint, testes e build)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: backend/package-lock.json
+      - name: Instalar dependências
+        run: npm ci
+      - name: Verificar o padrão do código (lint)
+        run: npx eslint "src/**/*.ts"
+      - name: Testes unitários
+        run: npm test -- --ci
+      - name: Build
+        run: npm run build
+
+  frontend:
+    name: Front-end (build)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Instalar dependências
+        run: npm ci
+      - name: Build
+        run: npm run build
