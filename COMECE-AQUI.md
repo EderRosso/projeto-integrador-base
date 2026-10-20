@@ -22,7 +22,7 @@ flowchart LR
 ## Passo 1 — Criar o repositório do grupo (só o papel **Git e Integração**, uma vez)
 
 1. Entre no GitHub com a sua conta e abra o repositório base:
-   **https://github.com/USUARIO-DO-PROFESSOR/projeto-integrador-base**
+   **https://github.com/EderRosso/projeto-integrador-base**
 2. Clique em **Fork** (canto superior direito).
    - **Repository name:** `grupo-N-tema` (ex.: `grupo-3-academia`)
    - Deixe marcado **Copy the main branch only**.
@@ -45,7 +45,7 @@ git clone https://github.com/USUARIO-DO-COLEGA/grupo-N-tema.git
 cd grupo-N-tema
 
 # 2) Ligue o seu clone ao repositório base, para receber as atualizações
-git remote add upstream https://github.com/USUARIO-DO-PROFESSOR/projeto-integrador-base.git
+git remote add upstream https://github.com/EderRosso/projeto-integrador-base.git
 git remote -v        # deve mostrar "origin" (grupo) e "upstream" (professor)
 
 # 3) Identifique-se (se ainda não fez neste computador)
