@@ -4,14 +4,14 @@
 
 # Oficina Mecânica — Projeto Integrador Sprint 5
 
-> Substitua o título e preencha as seções marcadas com ✏️. Este README é parte da entrega (checkpoint C5).
-
 **Grupo:** 3 · **Tema:** Oficina Mecânica
 **Turma:** Programador Full-Stack · SENAI · 2026
 
 ## ✏️ Sobre o sistema
 
-Descreva em 3 a 5 linhas o problema que o sistema resolve, para quem e qual o valor entregue.
+Um sistema web focado no acompanhamento de serviços automotivos. A oficina
+atualiza rapidamente o status de conserto do veículo no sistema, e o cliente pode
+consultar a situação em tempo real digitando apenas a placa do seu carro.
 
 ## Integrantes, módulos e papéis
 
@@ -20,7 +20,7 @@ Descreva em 3 a 5 linhas o problema que o sistema resolve, para quem e qual o va
 | Vitor | Cadastro de Veículos | PO / Scrum Master | ✏️ |
 | Julia | Cadastro de Clientes | Git e Integração | ✏️ |
 | João | Ordem de Serviço (Fluxo de Estados) | Segurança | ✏️ |
-| Nicolas |  | Testes e Qualidade | ✏️ |
+| Nicolas | Cadastro de Serviços e Valores | Testes e Qualidade | ✏️ |
 | Cibely | Busca Pública de Status | UX/UI e Acessibilidade | ✏️ |
 | Jhuly | Relatórios | Documentação e Apresentação | ✏️ |
 
