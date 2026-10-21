@@ -2,6 +2,9 @@
 
 Combinados de Git para os 6 integrantes. Quem cuida deste fluxo é o papel **Git e Integração**.
 
+> 💡 **Nunca usou Git ou tem dúvidas no terminal?**  
+> Leia o nosso [**Guia Definitivo de Git e GitHub para Iniciantes**](guia/GIT-E-GITHUB.md) com analogias, passo a passo ilustrado e primeiros socorros para conflitos e erros comuns!
+
 ## Branches
 
 | Branch | Para quê | Quem mexe |

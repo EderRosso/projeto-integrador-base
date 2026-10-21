@@ -33,6 +33,8 @@ Esta página liga cada conceito da aula a um arquivo **real** do projeto. Abra o
 
 Antes de começar, o papel **Git e Integração** traz esta atualização da base para a `develop` do grupo (passo 4 do `COMECE-AQUI.md`). Depois, cada aluno cria a sua branch: `<modulo>/front` (ex.: `pets/front`).
 
+> 💡 **Dúvidas nos comandos do Git?** Siga o roteiro passo a passo em [**`guia/GIT-E-GITHUB.md`**](../GIT-E-GITHUB.md) para criar a branch, salvar e abrir o Pull Request.
+
 No **seu módulo**, seguindo `features/produtos` e o manual do seu tema (`guia/temas/<tema>.md`, seção "Código de partida"):
 
 - [ ] Modelo (`<item>.model.ts`) com os campos do manual do tema

@@ -57,7 +57,7 @@ Depois, rode o projeto como explica o `README.md` (instalar, copiar o `.env`, `n
 
 ## Passo 3 — Trabalhar no seu módulo (todo dia)
 
-O fluxo completo está em [`CONTRIBUTING.md`](CONTRIBUTING.md). Resumo:
+O fluxo completo está em [`CONTRIBUTING.md`](CONTRIBUTING.md) e no passo a passo ilustrado para iniciantes em [**`guia/GIT-E-GITHUB.md`**](guia/GIT-E-GITHUB.md). Resumo:
 
 ```bash
 git checkout develop
@@ -133,6 +133,7 @@ Se travar, **não apague a pasta nem force nada**: chame o professor.
 | --- | --- |
 | Saber o que o meu módulo tem (campos, regras, rotas, telas) | `guia/temas/<seu-tema>.md` |
 | Saber **como** fazer cada etapa, aula a aula | `guia/Manual de Construção - Projeto Integrador.docx` |
+| Entender o fluxo de Git/GitHub passo a passo (para iniciantes) | [`guia/GIT-E-GITHUB.md`](guia/GIT-E-GITHUB.md) |
 | Resolver referência entre módulos, busca, datas, status | `guia/RECEITAS.md` |
 | Saber o que o meu papel transversal entrega | `guia/Responsabilidades dos Integrantes - Projeto Integrador.docx` |
 | Preencher os documentos do grupo | `guia/templates/` → salve a versão preenchida em `docs/` |
@@ -145,7 +146,6 @@ Se travar, **não apague a pasta nem force nada**: chame o professor.
 | Academia | [guia/temas/academia.md](guia/temas/academia.md) |
 | Oficina mecânica | [guia/temas/oficina-mecanica.md](guia/temas/oficina-mecanica.md) |
 | Clínica | [guia/temas/clinica.md](guia/temas/clinica.md) |
-| Restaurante / delivery | [guia/temas/restaurante-delivery.md](guia/temas/restaurante-delivery.md) |
 
 ## Problemas comuns
 

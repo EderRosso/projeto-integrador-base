@@ -6,6 +6,7 @@ Material do professor. **Não altere os arquivos desta pasta**: eles são atuali
 | --- | --- |
 | [`temas/`](temas/) | Manual de cada tema: campos, regras, rotas, telas e código de partida de cada módulo |
 | [`aulas/`](aulas/) | Roteiro de cada aula: onde ver cada conceito no projeto e a atividade |
+| [`GIT-E-GITHUB.md`](GIT-E-GITHUB.md) | Guia definitivo e passo a passo de Git/GitHub para iniciantes (sem tecniquês) |
 | [`RECEITAS.md`](RECEITAS.md) | Soluções para busca, exclusão lógica, referências, datas e status |
 | `Manual de Construção - Projeto Integrador.docx` | Como fazer cada etapa, aula a aula (abra no Word ou no Google Docs) |
 | `Responsabilidades dos Integrantes - Projeto Integrador.docx` | O que cada papel transversal entrega |
@@ -20,4 +21,3 @@ Material do professor. **Não altere os arquivos desta pasta**: eles são atuali
 | [Academia](temas/academia.md) | Alunos · Planos · Matrículas · Instrutores · Modalidades · Relatórios |
 | [Oficina mecânica](temas/oficina-mecanica.md) | Clientes · Veículos · Ordens de serviço · Serviços · Peças · Relatórios |
 | [Clínica](temas/clinica.md) | Pacientes · Profissionais · Consultas · Especialidades · Convênios · Relatórios |
-| [Restaurante / delivery](temas/restaurante-delivery.md) | Clientes · Cardápio · Pedidos · Categorias · Entregadores · Relatórios |

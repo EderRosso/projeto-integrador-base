@@ -5,6 +5,19 @@ Para receber: veja o **Passo 4** de [`COMECE-AQUI.md`](COMECE-AQUI.md).
 
 ---
 
+## v1.2 — Ajuste dos temas e guia de Git
+
+**Etiqueta:** `base-v1.2`
+
+- O tema **Restaurante / delivery** saiu da disciplina: agora são **5 temas para 5 grupos**, um por grupo.
+- Removido `guia/temas/restaurante-delivery.md` e as referências no `COMECE-AQUI.md` e em `guia/README.md`.
+- Manual de Construção atualizado: o sorteio distribui os 5 temas entre os 5 grupos.
+- Novo `guia/GIT-E-GITHUB.md`: passo a passo de Git e GitHub para iniciantes, com links no `COMECE-AQUI.md`, no `CONTRIBUTING.md`, em `guia/README.md` e em `guia/aulas/aula-02.md`.
+
+**O que o grupo precisa fazer:** só o merge. Nenhum arquivo do grupo foi alterado.
+
+---
+
 ## v1.1 — Aula 02 · Front-end com Angular
 
 **Etiqueta:** `base-v1.1`
