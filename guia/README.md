@@ -5,6 +5,7 @@ Material do professor. **Não altere os arquivos desta pasta**: eles são atuali
 | Arquivo | Para quê |
 | --- | --- |
 | [`temas/`](temas/) | Manual de cada tema: campos, regras, rotas, telas e código de partida de cada módulo |
+| [`aulas/`](aulas/) | Roteiro de cada aula: onde ver cada conceito no projeto e a atividade |
 | [`RECEITAS.md`](RECEITAS.md) | Soluções para busca, exclusão lógica, referências, datas e status |
 | `Manual de Construção - Projeto Integrador.docx` | Como fazer cada etapa, aula a aula (abra no Word ou no Google Docs) |
 | `Responsabilidades dos Integrantes - Projeto Integrador.docx` | O que cada papel transversal entrega |

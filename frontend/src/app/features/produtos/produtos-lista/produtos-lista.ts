@@ -1,13 +1,14 @@
 import { CurrencyPipe } from '@angular/common';
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { ProdutoCard } from '../produto-card/produto-card';
 import { CATEGORIAS, Categoria, Produto } from '../produto.model';
 import { ProdutosService } from '../services/produtos.service';
 
 /** Tela de listagem (componente de página — PDF 02, cap. 4). */
 @Component({
   selector: 'app-produtos-lista',
-  imports: [RouterLink, CurrencyPipe],
+  imports: [RouterLink, CurrencyPipe, ProdutoCard],
   templateUrl: './produtos-lista.html',
 })
 export class ProdutosLista implements OnInit {
@@ -20,6 +21,8 @@ export class ProdutosLista implements OnInit {
   protected readonly erro = signal<string | null>(null);
   protected readonly sucesso = signal<string | null>(null);
   protected readonly filtro = signal<Categoria | ''>('');
+  // Estado LOCAL da tela: como mostrar a lista (aula 02 — @if e componente filho)
+  protected readonly modo = signal<'tabela' | 'cartoes'>('tabela');
 
   ngOnInit(): void {
     this.carregar();

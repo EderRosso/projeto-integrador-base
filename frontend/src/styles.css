@@ -54,3 +54,15 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--cor-destaqu
 .msg-erro { color: var(--cor-perigo); }
 .acoes-form { display: flex; justify-content: flex-end; gap: 8px; }
 .etiqueta.destaque { background: var(--cor-destaque); color: #fff; }
+
+/* Aula 02 — alternar tabela/cartões e componente de cartão */
+.alternar-modo { margin-left: auto; display: flex; gap: 4px; }
+.botao.secundario.ativo { background: var(--cor-primaria); color: #fff; }
+.grade-cartoes { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.cartao-produto { background: #fff; border: 1px solid var(--cor-borda); border-radius: 8px; padding: 16px; display: flex; flex-direction: column; gap: 6px; }
+.cartao-produto .etiqueta { align-self: flex-start; }
+.cartao-produto h2 { font-size: 1.1rem; margin: 4px 0 0; color: var(--cor-primaria); }
+.cartao-produto .preco { font-size: 1.4rem; font-weight: 700; margin: 0; }
+.cartao-produto .estoque, .cartao-produto .sem-estoque { margin: 0; color: var(--cor-texto-suave); }
+.cartao-produto .sem-estoque { color: var(--cor-perigo); font-weight: 600; }
+.cartao-produto .acoes { display: flex; gap: 8px; margin-top: auto; padding-top: 8px; }

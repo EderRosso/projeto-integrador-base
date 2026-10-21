@@ -5,6 +5,19 @@ Para receber: veja o **Passo 4** de [`COMECE-AQUI.md`](COMECE-AQUI.md).
 
 ---
 
+## v1.1 — Aula 02 · Front-end com Angular
+
+**Etiqueta:** `base-v1.1`
+
+- Novo componente reutilizável `ProdutoCard` (`features/produtos/produto-card/`), com `input()` e `output()`.
+- A listagem de Produtos ganhou os botões **Tabela / Cartões** (exemplo de `@if`, evento e componente filho).
+- Estilos do cartão em `styles.css`.
+- Roteiro da aula em `guia/aulas/aula-02.md`: onde ver cada conceito no projeto, atividade, entrega e critérios.
+
+**O que o grupo precisa fazer:** só o merge. Nenhum arquivo do grupo foi alterado.
+
+---
+
 ## v1.0 — Aula 01 · versão inicial
 
 **Etiqueta:** `base-v1.0`

@@ -11,6 +11,15 @@
       <option [value]="c">{{ c }}</option>
     }
   </select>
+
+  <div class="alternar-modo" role="group" aria-label="Forma de exibição">
+    <button type="button" class="botao secundario" [class.ativo]="modo() === 'tabela'" (click)="modo.set('tabela')">
+      Tabela
+    </button>
+    <button type="button" class="botao secundario" [class.ativo]="modo() === 'cartoes'" (click)="modo.set('cartoes')">
+      Cartões
+    </button>
+  </div>
 </div>
 
 @if (sucesso()) {
@@ -24,6 +33,13 @@
   <p class="carregando">Carregando produtos...</p>
 } @else if (produtos().length === 0) {
   <p class="vazio">Nenhum produto encontrado.</p>
+} @else if (modo() === 'cartoes') {
+  <!-- Componente filho reutilizável: o pai passa o produto e escuta o evento -->
+  <div class="grade-cartoes">
+    @for (p of produtos(); track p._id) {
+      <app-produto-card [produto]="p" (excluir)="excluir($event)" />
+    }
+  </div>
 } @else {
   <div class="tabela-container">
     <table class="tabela">
