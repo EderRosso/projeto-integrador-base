@@ -2,11 +2,11 @@
 > **Este é o repositório base do Projeto Integrador.** Antes de tudo, leia o [`COMECE-AQUI.md`](COMECE-AQUI.md).
 > Depois do fork, este README passa a ser **do grupo**: apague este aviso e preencha as seções marcadas com ✏️.
 
-# [Nome do Sistema] — Projeto Integrador Sprint 5
+# Oficina Mecânica — Projeto Integrador Sprint 5
 
 > Substitua o título e preencha as seções marcadas com ✏️. Este README é parte da entrega (checkpoint C5).
 
-**Grupo:** ✏️ número do grupo · **Tema:** ✏️ tema sorteado
+**Grupo:** 3 · **Tema:** Oficina Mecânica
 **Turma:** Programador Full-Stack · SENAI · 2026
 
 ## ✏️ Sobre o sistema
@@ -17,12 +17,12 @@ Descreva em 3 a 5 linhas o problema que o sistema resolve, para quem e qual o va
 
 | Aluno | Módulo | Papel transversal | GitHub |
 | --- | --- | --- | --- |
-| ✏️ | ✏️ | PO / Scrum Master | ✏️ |
-| ✏️ | ✏️ | Git e Integração | ✏️ |
-| ✏️ | ✏️ | Segurança | ✏️ |
-| ✏️ | ✏️ | Testes e Qualidade | ✏️ |
-| ✏️ | ✏️ | UX/UI e Acessibilidade | ✏️ |
-| ✏️ | Relatórios | Documentação e Apresentação | ✏️ |
+| Vitor | Cadastro de Veículos | PO / Scrum Master | ✏️ |
+| Julia | Cadastro de Clientes | Git e Integração | ✏️ |
+| João | Ordem de Serviço (Fluxo de Estados) | Segurança | ✏️ |
+| Nicolas |  | Testes e Qualidade | ✏️ |
+| Cibely | Busca Pública de Status | UX/UI e Acessibilidade | ✏️ |
+| Jhuly | Relatórios | Documentação e Apresentação | ✏️ |
 
 ## Tecnologias
 
