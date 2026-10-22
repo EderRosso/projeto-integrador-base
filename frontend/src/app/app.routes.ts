@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { Layout } from './layout/layout';
 import { Inicio } from './pages/inicio/inicio';
 import { NaoEncontrado } from './pages/nao-encontrado/nao-encontrado';
+import { BUSCA_STATUS_ROUTES } from './features/busca-status/busca-status.routes';
 
 /**
  * Mapa de rotas da aplicação (PDF 02, cap. 10).
@@ -21,7 +22,13 @@ export const routes: Routes = [
       {
         path: 'veiculos',
         loadChildren: () => import('./features/veiculos/veiculos.routes').then(m => m.VEICULOS_ROUTES)
-      }
+      },
+      {
+        path: 'busca-status',
+        loadChildren: () => import('./features/busca-status/busca-status.routes').then(m => BUSCA_STATUS_ROUTES)
+      },
+
+
 
       // TODO (aula 02): cada aluno adiciona aqui a rota do seu módulo, ex.:
       // { path: 'pets', loadChildren: () => import('./features/pets/pets.routes').then((m) => m.PETS_ROUTES) },
