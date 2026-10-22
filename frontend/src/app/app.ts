@@ -9,6 +9,7 @@ import { RouterOutlet, RouterLink } from '@angular/router';
     <nav class="navbar" style="padding: 15px; background: #333; display: flex; gap: 15px;">
       <a routerLink="/produtos" style="color: white; text-decoration: none;">Produtos</a>
       <a routerLink="/servicos" style="color: white; text-decoration: none;">Serviços e Valores</a>
+      <a routerLink="/relatorios" style="color: white; text-decoration: none;">Relatórios</a>
     </nav>
     <main style="padding: 20px;">
       <router-outlet></router-outlet>
