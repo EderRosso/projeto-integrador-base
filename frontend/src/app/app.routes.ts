@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { Layout } from './layout/layout';
 import { Inicio } from './pages/inicio/inicio';
 import { NaoEncontrado } from './pages/nao-encontrado/nao-encontrado';
+import { OrdemServicoLista } from './features/ordem-servico/ordem-servico-lista/ordem-servico-lista';
 
 /**
  * Mapa de rotas da aplicação (PDF 02, cap. 10).
@@ -18,8 +19,11 @@ export const routes: Routes = [
         path: 'produtos',
         loadChildren: () => import('./features/produtos/produtos.routes').then((m) => m.PRODUTOS_ROUTES),
       },
-      // TODO (aula 02): cada aluno adiciona aqui a rota do seu módulo, ex.:
-      // { path: 'pets', loadChildren: () => import('./features/pets/pets.routes').then((m) => m.PETS_ROUTES) },
+      {
+        path: 'ordem-servico',
+        component: OrdemServicoLista,
+        title: 'Ordens de Serviço'
+      },
     ],
   },
   { path: '**', component: NaoEncontrado, title: 'Página não encontrada' },
