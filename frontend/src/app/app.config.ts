@@ -1,3 +1,4 @@
+
 import { provideHttpClient } from '@angular/common/http';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
@@ -10,8 +11,9 @@ import { ProdutosMockService } from './features/produtos/services/produtos-mock.
 import { ProdutosService } from './features/produtos/services/produtos.service';
 import { OrdemServicoMockService } from './features/ordem-servico/services/ordem-servico-mock.service';
 import { OrdemServicoService } from './features/ordem-servico/services/ordem-servico.service';
+import { VeiculosService } from './features/veiculos/services/veiculos.service';
+import { VeiculosMockService } from './features/veiculos/services/veiculos-mock.service';
 
-// Formatos brasileiros para moeda, datas e números (R$ 8,90)
 registerLocaleData(localePt);
 
 export const appConfig: ApplicationConfig = {
@@ -23,8 +25,10 @@ export const appConfig: ApplicationConfig = {
 
     {
       provide: OrdemServicoService,
-      useClass: environment.usarMock ? OrdemServicoMockService : OrdemServicoMockService,
+      useClass: OrdemServicoMockService,
     },
+
+    { provide: VeiculosService, useClass: VeiculosMockService },
 
     // Escolhe a implementação do serviço conforme o environment.
     // Cada aluno registra aqui o serviço do seu módulo, do mesmo jeito.
