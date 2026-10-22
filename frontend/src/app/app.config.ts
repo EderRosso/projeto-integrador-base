@@ -8,6 +8,8 @@ import { routes } from './app.routes';
 import { ProdutosApiService } from './features/produtos/services/produtos-api.service';
 import { ProdutosMockService } from './features/produtos/services/produtos-mock.service';
 import { ProdutosService } from './features/produtos/services/produtos.service';
+import { VeiculosService } from './features/veiculos/services/veiculos.service';
+import { VeiculosMockService } from './features/veiculos/services/veiculos-mock.service';
 
 // Formatos brasileiros para moeda, datas e números (R$ 8,90)
 registerLocaleData(localePt);
@@ -18,7 +20,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes, withComponentInputBinding()),
     provideHttpClient(),
     { provide: LOCALE_ID, useValue: 'pt-BR' },
-
+    { provide: VeiculosService, useClass: VeiculosMockService },
     // Escolhe a implementação do serviço conforme o environment.
     // Cada aluno registra aqui o serviço do seu módulo, do mesmo jeito.
     {

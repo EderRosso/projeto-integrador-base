@@ -1,0 +1,11 @@
+<div class="card" (click)="aoClicar()"
+    style="border: 1px solid #ccc; padding: 15px; margin-bottom: 10px; border-radius: 8px; cursor: pointer; background-color: #f9f9f9;">
+    <h3 style="margin-top: 0; color: #333;">Placa: {{ veiculo().placa }}</h3>
+    <p style="margin: 5px 0;"><strong>Modelo:</strong> {{ veiculo().modelo }} ({{ veiculo().cor }})</p>
+    <p style="margin: 5px 0;"><strong>Defeito:</strong> {{ veiculo().defeitoRelatado }}</p>
+    <p style="margin: 5px 0;"><strong>Status:</strong>
+        <span style="background-color: #007bff; color: white; padding: 3px 8px; border-radius: 12px; font-size: 0.9em;">
+            {{ veiculo().status }}
+        </span>
+    </p>
+</div>
