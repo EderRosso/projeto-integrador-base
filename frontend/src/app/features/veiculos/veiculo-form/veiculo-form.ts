@@ -16,7 +16,6 @@ export class VeiculoFormComponent implements OnInit {
   private veiculosService = inject(VeiculosService);
   private router = inject(Router);
 
-  // A variável que guarda as regras do formulário
   form!: FormGroup;
   salvando = false;
 
@@ -34,10 +33,9 @@ export class VeiculoFormComponent implements OnInit {
     });
   }
 
-  // Função para salvar os dados
   salvar() {
     if (this.form.invalid) {
-      this.form.markAllAsTouched(); // Faz os erros aparecerem se o form for inválido
+      this.form.markAllAsTouched(); 
       return;
     }
 
@@ -47,7 +45,7 @@ export class VeiculoFormComponent implements OnInit {
     this.veiculosService.criar(dados).subscribe({
       next: () => {
         this.salvando = false;
-        this.router.navigate(['/veiculos']); // Volta para a lista após salvar
+        this.router.navigate(['/veiculos']); 
       },
       error: (erro) => {
         console.error('Erro ao salvar:', erro);

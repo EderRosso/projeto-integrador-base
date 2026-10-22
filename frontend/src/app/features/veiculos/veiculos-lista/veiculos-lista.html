@@ -2,7 +2,6 @@
   <h2>Veículos na Oficina</h2>
   
   <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
-    <!-- Atualiza o termoBusca sempre que o utilizador digita -->
     <input 
       type="text" 
       [value]="termoBusca()"
@@ -16,36 +15,29 @@
     </button>
   </div>
 
-  <!-- ETAPA 8: Estado 1 - Carregando (com Feedback visual) -->
   @if (carregando()) {
     <div style="text-align: center; padding: 30px; color: #666;">
       <p>⏳ A carregar os veículos, por favor aguarde...</p>
     </div>
-  } 
+  }
   
-  <!-- ETAPA 8: Estado 2 - Erro ao carregar -->
   @else if (erroAoCarregar()) {
     <div style="background-color: #f8d7da; color: #721c24; padding: 15px; border-radius: 4px; text-align: center;">
       <p>❌ {{ erroAoCarregar() }}</p>
       <button (click)="carregarVeiculos()" style="margin-top: 10px;">Tentar Novamente</button>
     </div>
   }
-  
-  <!-- Estado 3: Sucesso no carregamento -->
   @else {
     
-    <!-- Lista Vazia (depois de carregar) -->
     @if (veiculosFiltrados().length === 0) {
       <div style="text-align: center; padding: 30px; background-color: #f9f9f9; border-radius: 4px;">
         <p style="color: #666;">Nenhum veículo encontrado com estes filtros.</p>
       </div>
     } 
     
-    <!-- A Lista com dados -->
     @else {
       <div class="lista">
         @for (carro of veiculosFiltrados(); track carro._id) {
-          <!-- O seu componente reutilizável da Etapa 4 -->
           <app-veiculo-card [veiculo]="carro"></app-veiculo-card>
         }
       </div>

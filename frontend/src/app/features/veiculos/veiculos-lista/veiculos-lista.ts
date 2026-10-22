@@ -16,14 +16,12 @@ import { VeiculoCardComponent } from '../veiculo-card/veiculo-card';
 export class VeiculosListaComponent implements OnInit {
   private veiculosService = inject(VeiculosService);
   
-  // ETAPA 8: Usando Signals em vez de variáveis normais
   veiculos = signal<Veiculo[]>([]);
   carregando = signal<boolean>(true);
   erroAoCarregar = signal<string | null>(null);
   
   termoBusca = signal<string>('');
 
-  // computed() reage automaticamente quando veiculos ou termoBusca mudam
   veiculosFiltrados = computed(() => {
     const lista = this.veiculos();
     const termo = this.termoBusca().toLowerCase();
@@ -54,7 +52,6 @@ export class VeiculosListaComponent implements OnInit {
     });
   }
 
-  // Atualiza o signal da busca conforme o utilizador digita
   aoDigitarBusca(evento: any) {
     this.termoBusca.set(evento.target.value);
   }

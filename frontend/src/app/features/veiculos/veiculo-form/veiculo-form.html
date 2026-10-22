@@ -34,7 +34,6 @@
       <label for="ano">Ano *</label>
       <input id="ano" type="number" formControlName="ano" style="width: 100%; padding: 8px;">
       
-      <!-- ETAPA 6: Erro do ano (pode ter várias mensagens dependendo do erro) -->
       @if (form.get('ano')?.invalid && form.get('ano')?.touched) {
         <small style="color: red; display: block; margin-top: 5px;">
           @if (form.get('ano')?.hasError('required')) { O ano é obrigatório. }
