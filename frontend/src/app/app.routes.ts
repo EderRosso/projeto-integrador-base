@@ -4,6 +4,7 @@ import { Layout } from './layout/layout';
 import { Inicio } from './pages/inicio/inicio';
 import { NaoEncontrado } from './pages/nao-encontrado/nao-encontrado';
 import { OrdemServicoLista } from './features/ordem-servico/ordem-servico-lista/ordem-servico-lista';
+import { BUSCA_STATUS_ROUTES } from './features/busca-status/busca-status.routes';
 
 /**
  * Mapa de rotas da aplicação.
@@ -31,6 +32,13 @@ export const routes: Routes = [
         loadChildren: () =>
           import('./features/veiculos/veiculos.routes').then(
             (m) => m.VEICULOS_ROUTES
+          ),
+      },
+      {
+        path: 'busca-status',
+        loadChildren: () =>
+          import('./features/busca-status/busca-status.routes').then(
+            (m) => m.BUSCA_STATUS_ROUTES
           ),
       },
     ],
