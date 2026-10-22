@@ -1,0 +1,41 @@
+<div class="container">
+  <header class="header-action">
+    <h2>Catálogo de Serviços e Valores</h2>
+    <a routerLink="/servicos/novo" class="btn-primary">+ Novo Serviço</a>
+  </header>
+
+  @if (carregando()) {
+    <div class="state-message">⏳ Carregando catálogo...</div>
+  } @else {
+    <div class="table-responsive">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Serviço</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Tempo Estimado</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (s of servicos(); track s._id) {
+            <tr>
+              <td><strong>{{ s.nome }}</strong></td>
+              <td>{{ s.descricao }}</td>
+              <td>R$ {{ s.preco.toFixed(2) }}</td>
+              <td>{{ s.tempoEstimado }}</td>
+              <td>
+                <button class="btn-danger" (click)="excluir(s._id)">Excluir</button>
+              </td>
+            </tr>
+          } @empty {
+            <tr>
+              <td colspan="5" class="empty-msg">Nenhum serviço cadastrado no catálogo.</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>
