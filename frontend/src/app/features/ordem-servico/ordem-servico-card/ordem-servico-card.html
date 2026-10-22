@@ -1,0 +1,12 @@
+<div class="card p-3 mb-3 shadow-sm">
+  <h5>{{ os().veiculo }} - <small class="text-muted">{{ os().placa }}</small></h5>
+  <p class="mb-1"><strong>Cliente:</strong> {{ os().cliente }}</p>
+  <p class="mb-1"><strong>Problema:</strong> {{ os().descricaoProblema }}</p>
+  <p class="mb-2"><strong>Status Atual:</strong> <span class="badge bg-primary">{{ os().status }}</span></p>
+  
+  <div class="btn-group mt-2" role="group">
+    <button class="btn btn-outline-secondary btn-sm" (click)="alterar('Na Fila')">Na Fila</button>
+    <button class="btn btn-outline-warning btn-sm" (click)="alterar('Em Conserto')">Em Conserto</button>
+    <button class="btn btn-outline-success btn-sm" (click)="alterar('Pronto')">Pronto</button>
+  </div>
+</div>
