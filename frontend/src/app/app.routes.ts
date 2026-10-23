@@ -1,3 +1,4 @@
+
 import { Routes } from '@angular/router';
 
 import { Layout } from './layout/layout';
@@ -61,6 +62,13 @@ export const routes: Routes = [
           ),
       },
     ],
+  },
+  {
+    path: 'cliente',
+    loadChildren: () =>
+      import('./features/clientes/cliente.routes').then(
+        (m) => m.CLIENTE_ROUTES
+      ),
   },
   {
     path: '**',

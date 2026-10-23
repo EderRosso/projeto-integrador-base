@@ -1,0 +1,23 @@
+.container-form { padding: 20px; max-width: 700px; margin: 0 auto; background: white; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+fieldset { border: 1px solid #ddd; border-radius: 6px; padding: 15px; margin-bottom: 20px; }
+legend { font-weight: 600; color: #333; padding: 0 5px; }
+.form-group { margin-bottom: 15px; display: flex; flex-direction: column; flex: 1; }
+.form-row { display: flex; gap: 15px; }
+label { font-size: 0.9rem; font-weight: 500; margin-bottom: 5px; color: #444; }
+input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+input:focus, textarea:focus { border-color: #0d6efd; outline: none; }
+.error { color: #dc3545; font-size: 0.8rem; margin-top: 4px; }
+.form-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+.btn-salvar { background: #198754; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: 500; }
+.btn-cancelar { 
+  background: #6c757d; 
+  color: white; 
+  padding: 10px 20px; 
+  border-radius: 6px; 
+  text-decoration: none; 
+  font-weight: 500; 
+  display: inline-block; 
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
