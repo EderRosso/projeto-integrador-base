@@ -1,13 +1,17 @@
+
 <header class="topo">
   <span class="marca">{{ nomeSistema }}</span>
-  <!-- TODO (aula 12/13): nome do usuário logado e botão Sair -->
 </header>
 
 <div class="corpo">
   <nav class="menu" aria-label="Menu principal">
     <a routerLink="/" routerLinkActive="ativo" [routerLinkActiveOptions]="{ exact: true }">Início</a>
-    <a routerLink="/produtos" routerLinkActive="ativo">Produtos</a>
-    <!-- TODO (aula 02): um link para o módulo de cada aluno -->
+    <!-- <a routerLink="/produtos" routerLinkActive="ativo">Produtos</a> -->
+    <a routerLink="/ordem-servico" routerLinkActive="ativo">Ordens de Serviço</a>
+    <a routerLink="/veiculos" routerLinkActive="ativo">Veículos</a>
+    <a routerLink="/busca-status" routerLinkActive="ativo">Consultar Status</a>
+    <a routerLink="/servicos" routerLinkActive="ativo">Serviços e Valores</a>
+    <a routerLink="/relatorios" routerLinkActive="ativo">Relatórios</a>
   </nav>
 
   <main class="conteudo">

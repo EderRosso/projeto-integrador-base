@@ -1,0 +1,578 @@
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 6%;
+    background-color: var(--cor-superficie);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--cor-primaria);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.menu a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: var(--cor-destaque);
+}
+
+
+/* Grupo de botões do cabeçalho */
+.botoes-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Estilo compartilhado */
+.botao-whatsapp,
+.botao-login {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.botao-whatsapp svg,
+.botao-login svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.icone-whatsapp {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* WhatsApp */
+.botao-whatsapp {
+    background-color: #218739;
+    color: var(--cor-texto-claro);
+}
+
+.botao-whatsapp:hover {
+    background-color: #17692B;
+}
+
+/* Login */
+.botao-login {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-claro);
+}
+
+.botao-login:hover {
+    background-color: var(--cor-primaria-escura);
+}
+
+/* Cabeçalho em telas pequenas */
+@media (max-width: 700px) {
+    .botoes-cabecalho {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Conteúdo principal */
+.inicio {
+    padding: 70px 20px;
+    text-align: center;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    min-height: 70vh;
+}
+
+.inicio h1 {
+    margin-bottom: 16px;
+    font-size: 32px;
+    color: var(--cor-primaria);
+}
+
+.inicio>p {
+    margin-bottom: 30px;
+    color: var(--cor-texto-secundario);
+}
+
+/* Pesquisa */
+.consulta {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-padrao);
+    text-align: left;
+}
+
+.consulta label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--cor-texto);
+    font-weight: bold;
+}
+
+.campo-pesquisa {
+    display: flex;
+    gap: 10px;
+}
+
+.campo-pesquisa input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-padrao);
+    color: var(--cor-texto);
+    background-color: var(--cor-superficie);
+    font-size: 16px;
+}
+
+.campo-pesquisa input:focus {
+    outline: 2px solid var(--cor-destaque);
+    outline-offset: 2px;
+}
+
+.campo-pesquisa button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: var(--raio-padrao);
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-claro);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.campo-pesquisa button:hover,
+.botao-login:hover {
+    background-color: var(--cor-primaria-escura);
+}
+
+
+/* Resultado da pesquisa */
+.resultado {
+    margin-top: 24px;
+    padding: 24px;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-padrao);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+.resultado h2 {
+    margin: 0 0 20px;
+    color: var(--cor-primaria);
+    text-align: center;
+}
+
+.resultado p {
+    margin: 12px 0;
+    color: var(--cor-texto);
+}
+
+.resultado strong {
+    color: var(--cor-primaria);
+}
+
+/* Resultado encontrado */
+.resultado-sucesso {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+}
+
+.resultado-sucesso h2 {
+    text-align: center;
+}
+
+/* Placa centralizada */
+.placa-mercosul {
+    width: 280px;
+    max-width: 100%;
+    margin: 0 auto 24px;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 2px solid #c5cbd0;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.10);
+}
+
+.placa-cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 12px;
+    background-color: #003399;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.placa-numero {
+    padding: 12px 6px;
+    color: #111111;
+    font-family: Arial, sans-serif;
+    font-size: clamp(28px, 7vw, 36px);
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.resultado .situacao {
+    padding: 4px 12px;
+    border-radius: 50px;
+    background-color: #ffa600;
+    color: #222222;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.resultado .observacao {
+    margin-top: 8px;
+    padding: 14px;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-padrao);
+    background-color: var(--cor-superficie);
+    font-style: italic;
+    overflow-wrap: anywhere;
+}
+
+/* Resultado não encontrado */
+.resultado-erro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 12px 0;
+}
+
+.resultado-erro p {
+    margin: 6px 0;
+}
+
+.resultado-erro svg {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 12px;
+    color: var(--cor-erro);
+}
+
+/* Ajustes para celular */
+@media (max-width: 700px) {
+    .resultado {
+        padding: 18px;
+    }
+
+    .resultado-sucesso {
+        align-items: stretch;
+    }
+
+    .resultado .situacao {
+        margin-left: 0;
+        margin-top: 6px;
+    }
+}
+
+/* Sobre */
+.sobre {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--cor-superficie);
+    color: var(--cor-texto);
+}
+
+.sobre h2 {
+    color: var(--cor-primaria);
+}
+
+.sobre-conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.sobre-texto {
+    max-width: 600px;
+    text-align: left;
+}
+
+.sobre-img {
+    width: 100%;
+    border-radius: var(--raio-padrao);
+    max-width: 500px;
+    height: auto;
+}
+
+
+/* Rodapé */
+.rodape {
+    padding: 20px;
+    background-color: var(--cor-primaria-escura);
+    color: var(--cor-texto-claro);
+    text-align: center;
+}
+
+.rodape p {
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+    .cabecalho {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .marca {
+        justify-content: center;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .inicio {
+        padding: 45px 16px;
+    }
+
+    .inicio h1 {
+        font-size: 26px;
+    }
+
+    .consulta {
+        padding: 18px;
+    }
+
+    .campo-pesquisa {
+        flex-direction: column;
+    }
+
+    .campo-pesquisa button {
+        width: 100%;
+    }
+}
+
+/* Dados do veículo */
+.dados-veiculo {
+    padding: 16px;
+    margin-bottom: 28px;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-padrao);
+    background-color: var(--cor-superficie);
+}
+
+.dados-veiculo p {
+    margin: 8px 0;
+}
+
+/* Linha do tempo */
+.linha-tempo {
+    margin: 0 0 28px;
+    text-align: left;
+}
+
+.linha-tempo > h3 {
+    margin: 0 0 24px;
+    color: var(--cor-primaria);
+    font-size: 18px;
+}
+
+/* Cada etapa */
+.etapa {
+    position: relative;
+    display: flex;
+    gap: 16px;
+    padding-bottom: 28px;
+}
+
+/* Linha que conecta os pontos */
+.etapa:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 34px;
+    left: 16px;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--cor-borda);
+    transform: translateX(-50%);
+}
+
+/* Ponto de cada etapa */
+.etapa-ponto {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex: 0 0 34px;
+    width: 34px;
+    height: 34px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--cor-borda);
+    border-radius: 50%;
+    background-color: var(--cor-superficie);
+    color: var(--cor-texto-secundario);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Etapas já concluídas */
+.etapa.concluida .etapa-ponto {
+    border-color: var(--cor-sucesso);
+    background-color: var(--cor-sucesso);
+    color: #ffffff;
+}
+
+.etapa.concluida::after {
+    background-color: var(--cor-sucesso);
+}
+
+/* Etapa atual */
+.etapa.ativa .etapa-ponto {
+    border-color: var(--cor-destaque);
+    background-color: var(--cor-destaque);
+    color: #ffffff;
+}
+
+.etapa-conteudo {
+    flex: 1;
+    min-width: 0;
+    padding-top: 3px;
+}
+
+.etapa-conteudo h4 {
+    margin: 0 0 6px;
+    color: var(--cor-texto);
+    font-size: 15px;
+}
+
+.etapa-conteudo p {
+    margin: 0;
+    color: var(--cor-texto-secundario);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.etapa.ativa .etapa-conteudo h4 {
+    color: var(--cor-destaque);
+}
+
+.etapa-status {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 10px;
+    border-radius: 50px;
+    background-color: #e5f2fb;
+    color: var(--cor-destaque);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 480px) {
+    .linha-tempo > h3 {
+        font-size: 16px;
+    }
+
+    .etapa {
+        gap: 12px;
+        padding-bottom: 24px;
+    }
+
+    .etapa-conteudo h4 {
+        font-size: 14px;
+    }
+}
+
+/* Etapas lado a lado no PC */
+@media (min-width: 701px) {
+    .linha-tempo {
+        width: 100%;
+    }
+
+    .linha-tempo > h3 {
+        margin-bottom: 30px;
+    }
+
+    .linha-tempo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .linha-tempo .etapa {
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 8px;
+        gap: 12px;
+    }
+
+    /* Organiza as etapas em uma linha horizontal */
+    .linha-tempo {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        column-gap: 12px;
+    }
+
+    .linha-tempo > h3 {
+        grid-column: 1 / -1;
+    }
+
+    /* Linha conectando os pontos */
+    .linha-tempo .etapa:not(:last-child)::after {
+        top: 17px;
+        left: calc(50% + 17px);
+        bottom: auto;
+        width: calc(100% - 10px);
+        height: 2px;
+        transform: none;
+    }
+
+    .linha-tempo .etapa-ponto {
+        flex: 0 0 34px;
+    }
+
+    .linha-tempo .etapa-conteudo {
+        width: 100%;
+    }
+
+    .linha-tempo .etapa-conteudo h4 {
+        font-size: 14px;
+    }
+
+    .linha-tempo .etapa-conteudo p {
+        font-size: 12px;
+    }
+}
