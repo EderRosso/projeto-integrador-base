@@ -1,20 +1,24 @@
-
 import { Routes } from '@angular/router';
 
 import { Layout } from './layout/layout';
-import { Inicio } from './pages/inicio/inicio';
+import { PaginaPublica } from './features/pagina-publica/pagina-publica';
 import { NaoEncontrado } from './pages/nao-encontrado/nao-encontrado';
 import { OrdemServicoLista } from './features/ordem-servico/ordem-servico-lista/ordem-servico-lista';
 
 export const routes: Routes = [
   {
     path: '',
+    component: PaginaPublica,
+    title: 'Oficina Mecânica',
+  },
+  {
+    path: 'painel',
     component: Layout,
     children: [
       {
         path: '',
-        component: Inicio,
-        title: 'Início',
+        redirectTo: 'ordem-servico',
+        pathMatch: 'full',
       },
       {
         path: 'servicos',
