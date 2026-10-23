@@ -1,20 +1,28 @@
 
 import { Routes } from '@angular/router';
+
 import { Layout } from './layout/layout';
 import { Inicio } from './pages/inicio/inicio';
 import { NaoEncontrado } from './pages/nao-encontrado/nao-encontrado';
 import { OrdemServicoLista } from './features/ordem-servico/ordem-servico-lista/ordem-servico-lista';
-import { BUSCA_STATUS_ROUTES } from './features/busca-status/busca-status.routes';
 
-/**
- * Mapa de rotas da aplicação.
- */
 export const routes: Routes = [
   {
     path: '',
     component: Layout,
     children: [
-      { path: '', component: Inicio, title: 'Início' },
+      {
+        path: '',
+        component: Inicio,
+        title: 'Início',
+      },
+      {
+        path: 'servicos',
+        loadChildren: () =>
+          import('./features/servicos/servicos.routes').then(
+            (m) => m.SERVICOS_ROUTES
+          ),
+      },
       {
         path: 'produtos',
         loadChildren: () =>
@@ -41,7 +49,18 @@ export const routes: Routes = [
             (m) => m.BUSCA_STATUS_ROUTES
           ),
       },
+      {
+        path: 'relatorios',
+        loadChildren: () =>
+          import('./features/relatorios/relatorios.routes').then(
+            (m) => m.RELATORIOS_ROUTES
+          ),
+      },
     ],
   },
-  { path: '**', component: NaoEncontrado, title: 'Página não encontrada' },
+  {
+    path: '**',
+    component: NaoEncontrado,
+    title: 'Página não encontrada',
+  },
 ];
