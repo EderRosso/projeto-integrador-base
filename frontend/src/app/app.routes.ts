@@ -61,6 +61,13 @@ export const routes: Routes = [
             (m) => m.RELATORIOS_ROUTES
           ),
       },
+      {
+        path: 'cliente',
+        loadChildren: () =>
+          import('./features/clientes/cliente.routes').then(
+            (m) => m.CLIENTE_ROUTES
+          ),
+      },
     ],
   },
   {
