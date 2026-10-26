@@ -2,13 +2,13 @@
 
 :root {
   /* Cores principais */
-  --cor-primaria: #12304A;
-  --cor-destaque: #0877BD;
-  --cor-primaria-escura: #0B2033;
+  --cor-primaria: #46101b;
+  --cor-destaque:   #ff914d ;
+  --cor-primaria-escura: #46101b ;
 
   /* Fundos */
   --cor-fundo: #F4F7FA;
-  --cor-superficie: #FFFFFF;
+  --cor-superficie: #fffdf4;
 
   /* Textos */
   --cor-texto: #222B35;
