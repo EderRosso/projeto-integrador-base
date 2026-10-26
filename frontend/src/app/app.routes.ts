@@ -10,7 +10,7 @@ export const routes: Routes = [
   {
     path: '',
     component: PaginaPublica,
-    title: 'Oficina Mecânica',
+    title: 'Garagem Pro',
   },
   {
     path: 'painel',
