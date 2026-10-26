@@ -1,12 +1,15 @@
-
 import { Routes } from '@angular/router';
-
 import { Layout } from './layout/layout';
 import { PaginaPublica } from './features/pagina-publica/pagina-publica';
 import { NaoEncontrado } from './pages/nao-encontrado/nao-encontrado';
 import { OrdemServicoLista } from './features/ordem-servico/ordem-servico-lista/ordem-servico-lista';
+import { LoginComponent } from './features/login/login.component';
 
 export const routes: Routes = [
+  {
+    path: 'login',
+    component: LoginComponent
+  },
   {
     path: '',
     component: PaginaPublica,
@@ -21,7 +24,7 @@ export const routes: Routes = [
         redirectTo: 'ordem-servico',
         pathMatch: 'full',
       },
-      {
+     {
         path: 'servicos',
         loadChildren: () =>
           import('./features/servicos/servicos.routes').then(
@@ -69,13 +72,6 @@ export const routes: Routes = [
           ),
       },
     ],
-  },
-  {
-    path: 'cliente',
-    loadChildren: () =>
-      import('./features/clientes/cliente.routes').then(
-        (m) => m.CLIENTE_ROUTES
-      ),
   },
   {
     path: '**',
