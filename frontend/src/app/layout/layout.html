@@ -1,21 +1,99 @@
 
 <header class="topo">
-  <span class="marca">{{ nomeSistema }}</span>
+  <button
+    class="botao-menu"
+    type="button"
+    (click)="alternarMenu()"
+    [attr.aria-expanded]="menuAberto"
+    aria-controls="menu-principal"
+    aria-label="Abrir ou fechar menu"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <a class="marca" routerLink="/" aria-label="Ir para o início">
+    <span>Administrador - {{ nomeSistema }}</span>
+  </a>
+
 </header>
 
+<div
+  class="fundo-menu"
+  [class.visivel]="menuAberto"
+  (click)="fecharMenu()"
+></div>
+
 <div class="corpo">
-  <nav class="menu" aria-label="Menu principal">
-    <a routerLink="/" routerLinkActive="ativo" [routerLinkActiveOptions]="{ exact: true }">Início</a>
-    <!-- <a routerLink="/produtos" routerLinkActive="ativo">Produtos</a> -->
-    <a routerLink="/painel/ordem-servico" routerLinkActive="ativo">Ordens de Serviço</a>
-    <a routerLink="/painel/veiculos" routerLinkActive="ativo">Veículos</a>
-    <a routerLink="/painel/busca-status" routerLinkActive="ativo">Consultar Status</a>
-    <a routerLink="/painel/servicos" routerLinkActive="ativo">Serviços e Valores</a>
-    <a routerLink="/painel/cliente" routerLinkActive="ativo">Clientes</a>
-    <a routerLink="/painel/relatorios" routerLinkActive="ativo">Relatórios</a>
-  </nav>
+  <aside
+    id="menu-principal"
+    class="sidebar"
+    [class.aberta]="menuAberto"
+  >
+    <nav class="menu" aria-label="Menu principal">
+      <a
+        routerLink="/"
+        routerLinkActive="ativo"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="fecharMenu()"
+      >
+        <span class="menu-icone">⌂</span>
+        <span>Início</span>
+      </a>
+
+      <a
+        routerLink="/painel/ordem-servico"
+        routerLinkActive="ativo"
+        (click)="fecharMenu()"
+      >
+        <span class="menu-icone">▤</span>
+        <span>Ordens de Serviço</span>
+      </a>
+
+      <a
+        routerLink="/painel/veiculos"
+        routerLinkActive="ativo"
+        (click)="fecharMenu()"
+      >
+        <span class="menu-icone">▰</span>
+        <span>Veículos</span>
+      </a>
+
+
+      <a
+        routerLink="/painel/servicos"
+        routerLinkActive="ativo"
+        (click)="fecharMenu()"
+      >
+        <span class="menu-icone">⚙</span>
+        <span>Serviços e Valores</span>
+      </a>
+
+      <a
+        routerLink="/painel/cliente"
+        routerLinkActive="ativo"
+        (click)="fecharMenu()"
+      >
+        <span class="menu-icone">♙</span>
+        <span>Clientes</span>
+      </a>
+
+      <a
+        routerLink="/painel/relatorios"
+        routerLinkActive="ativo"
+        (click)="fecharMenu()"
+      >
+        <span class="menu-icone">▥</span>
+        <span>Relatórios</span>
+      </a>
+    </nav>
+
+  </aside>
 
   <main class="conteudo">
-    <router-outlet />
+    <div class="conteudo-interno">
+      <router-outlet />
+    </div>
   </main>
 </div>
