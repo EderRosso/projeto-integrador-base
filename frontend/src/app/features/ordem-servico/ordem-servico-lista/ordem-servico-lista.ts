@@ -28,9 +28,17 @@ export class OrdemServicoLista implements OnInit {
   ordens = signal<OrdemServicoExibicao[]>([]);
   carregando = signal(true);
   erro = signal<string | null>(null);
-totalNaFila: any;
-totalEmConserto: any;
-totalProntos: any;
+  get totalNaFila(): number {
+    return this.ordens().filter(os => os.status === 'Na Fila').length;
+  }
+
+  get totalEmConserto(): number {
+    return this.ordens().filter(os => os.status === 'Em Conserto').length;
+  }
+
+  get totalProntos(): number {
+    return this.ordens().filter(os => os.status === 'Pronto').length;
+  }
 
   ngOnInit(): void {
     this.carregarOrdens();

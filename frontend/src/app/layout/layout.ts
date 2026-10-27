@@ -15,6 +15,7 @@ import {
 })
 export class Layout {
   nomeSistema = 'Garagem Pro';
+
   menuAberto = false;
 
   alternarMenu(): void {

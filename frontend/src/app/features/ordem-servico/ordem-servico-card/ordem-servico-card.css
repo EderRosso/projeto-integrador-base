@@ -2,6 +2,7 @@
 :host {
   display: block;
   min-width: 0;
+  height: 100%;
 }
 
 .os-card {
@@ -12,43 +13,29 @@
   background: var(--cor-superficie);
   border: 1px solid var(--cor-borda);
   border-radius: var(--raio-padrao);
-  transition: box-shadow 0.2s, border-color 0.2s;
-}
-
-.os-card:hover {
-  border-color: var(--cor-destaque);
-  box-shadow: 0 4px 12px rgb(0 0 0 / 6%);
+  box-sizing: border-box;
 }
 
 .os-card-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
   padding-bottom: 16px;
   border-bottom: 1px solid var(--cor-borda);
 }
 
-.status-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 6px 9px;
-  border-radius: var(--raio-padrao);
-  font-size: 11px;
-  font-weight: 700;
+.os-identificacao {
+  min-width: 0;
 }
 
-.status-ponto {
-  width: 7px;
-  height: 7px;
-  background: currentColor;
-  border-radius: 50%;
+.status-chip {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
 }
 
 .status-fila {
-  color: var(--cor-alerta);
-  background: #fff4d8;
+  color: #8a6100;
+  background: #fffaf0;
 }
 
 .status-conserto {
@@ -57,68 +44,60 @@
 }
 
 .status-pronto {
-  color: var(--cor-sucesso);
-  background: #e8f6ee;
+  color: #216b45;
+  background: #f0f7f2;
 }
 
 .os-card-header h3 {
   margin: 12px 0 4px;
-  color: var(--cor-primaria);
-  font-size: 18px;
-  font-weight: 700;
+  color: var(--cor-texto);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
 }
 
 .placa {
   margin: 0;
   color: var(--cor-texto-secundario);
   font-size: 13px;
-  font-weight: 600;
-}
-
-.carro-icone {
-  display: grid;
-  flex-shrink: 0;
-  width: 42px;
-  height: 42px;
-  place-items: center;
-  background: var(--cor-fundo);
-  border-radius: var(--raio-padrao);
-  font-size: 21px;
+  font-weight: 500;
 }
 
 .os-card-dados {
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
   padding: 18px 0;
 }
 
 .dado {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
   min-width: 0;
 }
 
 .dado-label {
   color: var(--cor-texto-secundario);
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .dado strong {
-  overflow-wrap: anywhere;
   color: var(--cor-texto);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 
 .problema p {
   margin: 0;
-  color: var(--cor-texto-secundario);
+  color: var(--cor-texto);
   font-size: 13px;
-  line-height: 1.5;
+  line-height: 1.6;
   overflow-wrap: anywhere;
 }
 
@@ -132,7 +111,7 @@
   margin-bottom: 10px;
   color: var(--cor-texto-secundario);
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .botoes-status {
@@ -147,14 +126,16 @@
   color: var(--cor-texto);
   background: var(--cor-superficie);
   border: 1px solid var(--cor-borda);
-  border-radius: var(--raio-padrao);
+  border-radius: 5px;
+  font-family: inherit;
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
 }
 
 .btn-status:hover:not(:disabled) {
-  border-color: var(--cor-destaque);
+  border-color: var(--cor-primaria);
   background: var(--cor-fundo);
 }
 

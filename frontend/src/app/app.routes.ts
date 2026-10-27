@@ -4,7 +4,6 @@ import { PaginaPublica } from './features/pagina-publica/pagina-publica';
 import { NaoEncontrado } from './pages/nao-encontrado/nao-encontrado';
 import { OrdemServicoLista } from './features/ordem-servico/ordem-servico-lista/ordem-servico-lista';
 import { LoginComponent } from './features/login/login.component';
-import { OrdemServicoForm } from './features/ordem-servico/ordem-servico-form/ordem-servico-form';
 export const routes: Routes = [
   {
     path: 'login',
@@ -28,11 +27,6 @@ export const routes: Routes = [
         path: 'servicos',
         loadChildren: () =>
           import('./features/servicos/servicos.routes').then((m) => m.SERVICOS_ROUTES),
-      },
-      {
-        path: 'nova-ordem-servico',
-        component: OrdemServicoForm,
-        title: 'Nova Ordem de Serviço',
       },
       {
         path: 'produtos',

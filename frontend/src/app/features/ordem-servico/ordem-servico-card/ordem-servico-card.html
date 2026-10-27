@@ -1,42 +1,40 @@
+
 <article class="os-card">
   <header class="os-card-header">
-    <div>
+    <div class="os-identificacao">
       <span
         class="status-chip"
         [class.status-fila]="os().status === 'Na Fila'"
         [class.status-conserto]="os().status === 'Em Conserto'"
         [class.status-pronto]="os().status === 'Pronto'"
       >
-        <span class="status-ponto"></span>
         {{ os().status }}
       </span>
 
       <h3>{{ os().veiculo }}</h3>
       <p class="placa">{{ os().placa }}</p>
     </div>
-
-    <div class="carro-icone">🚘</div>
   </header>
 
   <div class="os-card-dados">
     <div class="dado">
-      <span class="dado-label">CLIENTE</span>
+      <span class="dado-label">Cliente</span>
       <strong>{{ os().cliente }}</strong>
     </div>
 
     <div class="dado">
-      <span class="dado-label">DATA DE ENTRADA</span>
+      <span class="dado-label">Data de entrada</span>
       <strong>{{ os().dataEntrada | date: 'dd/MM/yyyy' }}</strong>
     </div>
 
     <div class="dado problema">
-      <span class="dado-label">PROBLEMA RELATADO</span>
+      <span class="dado-label">Problema relatado</span>
       <p>{{ os().descricaoProblema }}</p>
     </div>
   </div>
 
-  <div class="os-card-acoes">
-    <span class="acao-titulo">Atualizar andamento</span>
+  <footer class="os-card-acoes">
+    <span class="acao-titulo">Status da ordem</span>
 
     <div class="botoes-status">
       <button
@@ -69,5 +67,5 @@
         Pronto
       </button>
     </div>
-  </div>
+  </footer>
 </article>
