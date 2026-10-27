@@ -1,12 +1,8 @@
-> [!IMPORTANT]
-> **Este é o repositório base do Projeto Integrador.** Antes de tudo, leia o [`COMECE-AQUI.md`](COMECE-AQUI.md).
-> Depois do fork, este README passa a ser **do grupo**: apague este aviso e preencha as seções marcadas com ✏️.
-
-# [Nome do Sistema] — Projeto Integrador Sprint 5
+# Turma da Bomba — Projeto Integrador Sprint 5
 
 > Substitua o título e preencha as seções marcadas com ✏️. Este README é parte da entrega (checkpoint C5).
 
-**Grupo:** ✏️ número do grupo · **Tema:** ✏️ tema sorteado
+**Grupo:** 1 · **Tema:** Academia
 **Turma:** Programador Full-Stack · SENAI · 2026
 
 ## ✏️ Sobre o sistema
@@ -17,12 +13,12 @@ Descreva em 3 a 5 linhas o problema que o sistema resolve, para quem e qual o va
 
 | Aluno | Módulo | Papel transversal | GitHub |
 | --- | --- | --- | --- |
-| ✏️ | ✏️ | PO / Scrum Master | ✏️ |
-| ✏️ | ✏️ | Git e Integração | ✏️ |
-| ✏️ | ✏️ | Segurança | ✏️ |
-| ✏️ | ✏️ | Testes e Qualidade | ✏️ |
-| ✏️ | ✏️ | UX/UI e Acessibilidade | ✏️ |
-| ✏️ | Relatórios | Documentação e Apresentação | ✏️ |
+| Vinicius | Alunos | PO / Scrum Master | [Vinicius](https://github.com/vinigenaro) |
+| Tiago | Planos | Git e Integração | [Tiago](https://github.com/padilhath) |
+| Wolfegan | Matrículas | Segurança | [Wolfegan](https://github.com/weluvlwmos) |
+| Andrieli | Instrutores | Testes e Qualidade | [Andrieli](https://github.com/Andrieli-Nickhorn) |
+| Bruno | Modalidades | UX/UI e Acessibilidade | [Bruno](https://github.com/bruno-dpo) |
+| Alexa | Relatórios | Documentação e Apresentação | [Alexa](https://github.com/alexa-rembowski) |
 
 ## Tecnologias
 
