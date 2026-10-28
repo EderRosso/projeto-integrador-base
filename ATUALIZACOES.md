@@ -5,6 +5,17 @@ Para receber: veja o **Passo 4** de [`COMECE-AQUI.md`](COMECE-AQUI.md).
 
 ---
 
+## v1.4 — Aulas 07 e 08 · Banco de Dados com Mongoose
+
+**Etiqueta:** `base-v1.4`
+
+- `backend/src/produtos/schemas/produto.schema.ts` atualizado com as mensagens de validação nos `@Prop` (`required`, `minlength`, `maxlength`, `min` e `enum`), alinhado aos slides das aulas 07 e 08.
+- Roteiros das aulas em `guia/aulas/aula-07.md` (modelagem e Dicionário de Dados) e `guia/aulas/aula-08.md` (schema, `forFeature`, `seed` e entrega do Checkpoint C2).
+
+**O que o grupo precisa fazer:** só o merge. Nenhum arquivo do grupo foi alterado.
+
+---
+
 ## v1.3 — Exemplos dos documentos do grupo
 
 **Etiqueta:** `base-v1.3`
