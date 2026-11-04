@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
-import { ProdutosModule } from './produtos/produtos.module';
+import { ProdutosModule } from '../produtos/produtos.module';
+import { OrdemServicoModule } from '../ordem-servico/ordem-servico.module';
 
 @Module({
   imports: [
@@ -19,9 +20,9 @@ import { ProdutosModule } from './produtos/produtos.module';
       }),
     }),
 
-    // Módulo de exemplo. Cada aluno cria o módulo do seu domínio
-    // seguindo este modelo e o registra aqui.
+    // Módulos da aplicação
     ProdutosModule,
+    OrdemServicoModule, // Adicionado aqui
   ],
 })
 export class AppModule {}

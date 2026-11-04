@@ -1,0 +1,38 @@
+<div class="container-clientes">
+  <div class="header-section">
+    <h2>Gerenciamento de Clientes</h2>
+    <a routerLink="novo" class="btn-novo">+ Novo Cliente</a>
+  </div>
+
+  @if (clientes().length === 0) {
+    <p class="empty-msg">Nenhum cliente cadastrado no momento.</p>
+  } @else {
+    <div class="table-responsive">
+      <table class="tabela-clientes">
+        <thead>
+          <tr>
+            <th>Nome Completo</th>
+            <th>CPF</th>
+            <th>Telefone</th>
+            <th>Cidade/UF</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (cliente of clientes(); track cliente.id) {
+            <tr>
+              <td><strong>{{ cliente.nomeCompleto }}</strong></td>
+              <td>{{ cliente.cpf }}</td>
+              <td>{{ cliente.telefone }}</td>
+              <td>{{ cliente.endereco.cidade }} / {{ cliente.endereco.estado }}</td>
+              <td>
+                <a [routerLink]="['editar', cliente.id]" class="btn-editar" style="text-decoration: none; color: black; display: inline-block;">Editar</a>
+                <button class="btn-excluir" (click)="deletar(cliente.id)">Excluir</button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>
