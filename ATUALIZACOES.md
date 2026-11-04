@@ -5,6 +5,18 @@ Para receber: veja o **Passo 4** de [`COMECE-AQUI.md`](COMECE-AQUI.md).
 
 ---
 
+## v1.6 — Aulas 11, 12 e 13 · Regras de Negócio, JWT, Perfis e Integração (C4)
+
+**Etiqueta:** `base-v1.6`
+
+- `backend/src/produtos/produtos.controller.ts` atualizado com o decorator `@ApiBearerAuth()` para autorização no Swagger (aula 12, slide 9).
+- `backend/.env.example` atualizado com a variável `JWT_SECRET` (mínimo de 32 caracteres para assinatura de tokens).
+- Roteiros das aulas em `guia/aulas/aula-11.md` (regras no service, validação contextual, estados e relatórios com aggregation), `guia/aulas/aula-12.md` (autenticação com JWT, bcrypt, guard global e testes obrigatórios) e `guia/aulas/aula-13.md` (autorização por perfis, login no front, `usarMock: false` e entrega do Checkpoint C4).
+
+**O que o grupo precisa fazer:** só o merge. Nenhum arquivo do grupo foi alterado.
+
+---
+
 ## v1.5 — Aulas 09 e 10 · MVC, CRUD, DTOs, Testes e Swagger
 
 **Etiqueta:** `base-v1.5`
