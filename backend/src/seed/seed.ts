@@ -6,6 +6,7 @@
 import 'dotenv/config';
 import mongoose from 'mongoose';
 import { ProdutoSchema } from '../produtos/schemas/produto.schema';
+import { OrdemServicoSchema, StatusOrdemServico } from '../ordem-servico/schemas/ordem-servico.schema';
 
 const produtos = [
   {
@@ -20,17 +21,65 @@ const produtos = [
   { nome: 'Pilha AA (par)', preco: 12.0, estoque: 15, categoria: 'outros' },
 ];
 
+const ordensServico = [
+  {
+    clienteId: new mongoose.Types.ObjectId(),
+    veiculoId: new mongoose.Types.ObjectId(),
+    status: StatusOrdemServico.ABERTA,
+    descricaoProblema: 'Troca de óleo e substituição dos filtros de ar e combustível',
+    valorEstimado: 350.00,
+    pecasUtilizadas: ['Óleo 5W30', 'Filtro de Óleo'],
+  },
+  {
+    clienteId: new mongoose.Types.ObjectId(),
+    veiculoId: new mongoose.Types.ObjectId(),
+    status: StatusOrdemServico.EM_ANDAMENTO,
+    descricaoProblema: 'Revisão do sistema de freios e troca das pastilhas dianteiras',
+    valorEstimado: 480.00,
+    pecasUtilizadas: ['Pastilha de Freio Frontal'],
+  },
+  {
+    clienteId: new mongoose.Types.ObjectId(),
+    veiculoId: new mongoose.Types.ObjectId(),
+    status: StatusOrdemServico.CONCLUIDA,
+    descricaoProblema: 'Alinhamento 3D e balanceamento das quatro rodas',
+    valorEstimado: 180.00,
+    pecasUtilizadas: [],
+  },
+  {
+    clienteId: new mongoose.Types.ObjectId(),
+    veiculoId: new mongoose.Types.ObjectId(),
+    status: StatusOrdemServico.ABERTA,
+    descricaoProblema: 'Diagnóstico de barulho na suspensão traseira',
+    valorEstimado: 250.00,
+    pecasUtilizadas: [],
+  },
+  {
+    clienteId: new mongoose.Types.ObjectId(),
+    veiculoId: new mongoose.Types.ObjectId(),
+    status: StatusOrdemServico.CANCELADA,
+    descricaoProblema: 'Troca da correia dentada e tensor do motor',
+    valorEstimado: 620.00,
+    pecasUtilizadas: ['Correia Dentada', 'Tensor'],
+  },
+];
+
 async function seed() {
   const uri =
     process.env.MONGODB_URI ?? 'mongodb://localhost:27017/projeto-integrador';
   await mongoose.connect(uri);
 
+  // Produtos
   const Produto = mongoose.model('Produto', ProdutoSchema, 'produtos');
   await Produto.deleteMany({});
   await Produto.insertMany(produtos);
-  console.log(`✔ ${produtos.length} produtos inseridos`);
+  console.log(`✓ ${produtos.length} produtos inseridos`);
 
-  // TODO (aula 08): insira aqui os dados de exemplo do seu módulo
+  // Ordens de Serviço (Aula 08)
+  const OrdemServico = mongoose.model('OrdemServico', OrdemServicoSchema, 'ordem-servico');
+  await OrdemServico.deleteMany({});
+  await OrdemServico.insertMany(ordensServico);
+  console.log(`✓ ${ordensServico.length} ordens de serviço inseridas`);
 
   await mongoose.disconnect();
 }
