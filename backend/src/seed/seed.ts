@@ -6,7 +6,7 @@
 import 'dotenv/config';
 import mongoose from 'mongoose';
 import { ProdutoSchema } from '../produtos/schemas/produto.schema';
-import { OrdemServicoSchema, StatusOrdemServico } from '../ordem-servico/schemas/ordem-servico.schema';
+import { OrdemServicoSchema, StatusOrdemServico } from '../schemas/ordem-servico.schema';
 
 const produtos = [
   {
